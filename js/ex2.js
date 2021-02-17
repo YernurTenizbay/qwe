@@ -6,7 +6,7 @@ function createElements(text){
     var newElem=document.createElement("p");
     var deleteSpan=document.createElement("span");
     var checker = document.createElement("INPUT");
-    checker .setAttribute("type", "checkbox");
+    checker.setAttribute("type", "checkbox");
     checker.className="b_boxes";
     deleteSpan.className="b_delete";
     deleteSpan.textContent="delete";
@@ -22,14 +22,20 @@ function createElements(text){
         }
     })
     deleteSpan.addEventListener("click",function(){
+        if(checker.checked==false){
+            let res=confirm("Do you agree? You dont check");
+            
+        }
+        else{
         blocklist.removeChild(newElem);
+        }
     });
     blocklist.appendChild(newElem);
 }
 
     btn.addEventListener("click",function(e){
         e.preventDefault();
-        if(!(input.value==="New Task"||input.value==="")){
+        if(!(input.value=="New Task"||input.value=="")){
             createElements(input.value);
             input.value="New Task";
         }
@@ -39,8 +45,13 @@ function createElements(text){
         input.value="";
     });
     input.addEventListener("blur",function(){
-        if(input.value===""){
+        if(input.value==""){
             input.value="New Task";
         }
     });
+
+
+
+
+
 

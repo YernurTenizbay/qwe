@@ -10,6 +10,12 @@ body{
     margin:0 auto;
     padding: 0 15px;
 }
+#image{
+    border-radius: 3px;
+    position: absolute;
+    margin-top: 0px;
+    z-index: -1;
+}
 .block{
     width:500px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
