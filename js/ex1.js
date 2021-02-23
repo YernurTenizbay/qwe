@@ -29,8 +29,13 @@ function myFunction() {
     c.style.marginTop=q+6+"px";
     ims.style.marginTop=q+3+"px";
     body.appendChild(p);
-    body.appendChild(c);
-    body.appendChild(ims);
+    p.appendChild(c);
+    p.appendChild(ims);
+    ims.addEventListener("click",function(){
+      body.removeChild(p);
+      body.removeChild(c);
+      body.removeChild(ims);
+    })
     i++;
     q=q+20;
     
