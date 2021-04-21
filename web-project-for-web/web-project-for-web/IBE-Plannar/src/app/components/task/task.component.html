@@ -1,0 +1,14 @@
+<div class="task" *ngFor="let task of task">
+  <div class="left">
+    <h3 class="task-title">{{task.title}}</h3>
+    <p class="task-desc">{{task.desc}}</p>
+  </div>
+  <div class="right">
+    <div class="task-tags">
+      <p class="task-tags">tags:</p>
+    </div>
+    <div class="task-deadline">
+      <p>deadline: {{task.deadline}}</p>
+    </div>
+  </div>
+</div>
